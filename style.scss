@@ -1,0 +1,220 @@
+$font-primary: "Manrope", sans-serif;
+$Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+$Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+$Grayish-Blue: hsl(212, 23%, 69%);
+$Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+  height: 300px;
+  background-color: $Light-Grayish-Blue;
+  box-shadow: 3px 3px 25px hsla(217, 19%, 35%, 0.5);
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .image {
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    padding: 20px 50px;
+    font-family: $font-primary;
+
+    .title {
+      font-size: 1.2em;
+      color: $Very-Dark-Grayish-Blue;
+      font-weight: bold;
+    }
+
+    .p1 {
+      font-size: 13px;
+      color: $Desaturated-Dark-Blue;
+      line-height: 20px;
+    }
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .profile-picture {
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+    }
+
+    .profile-name {
+      margin-left: 15px;
+      white-space: nowrap;
+
+      .name {
+        color: $Very-Dark-Grayish-Blue;
+        font-weight: bold;
+        font-size: 13px;
+        margin-bottom: -10px;
+      }
+
+      .date {
+        color: $Desaturated-Dark-Blue;
+        font-size: 12px;
+      }
+    }
+
+    .share {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      margin-left: 200px;
+      font-size: 20px;
+      color: $Very-Dark-Grayish-Blue;
+      cursor: pointer;
+      background-color: $Light-Grayish-Blue;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+
+      .application {
+        width: max-content;
+        position: absolute;
+        bottom: 110px;
+        right: 145px;
+
+        .fixed {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 0px;
+          overflow: hidden;
+          padding: 0px 35px;
+          width: max-content;
+          position: fixed;
+          background-color: $Very-Dark-Grayish-Blue;
+          font-family: $font-primary;
+          text-transform: uppercase;
+          border-radius: 10px;
+          transition: 0.5s;
+        }
+
+        .public {
+          font-size: 13px;
+          color: $Grayish-Blue;
+          margin-right: 20px;
+          font-weight: bold;
+          letter-spacing: 5px;
+        }
+
+        .ion-icon {
+          ion-icon {
+            margin-right: 10px;
+            color: $Light-Grayish-Blue;
+            cursor: pointer;
+          }
+        }
+
+        .fixed::after {
+          content: "";
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid $Very-Dark-Grayish-Blue;
+          position: absolute;
+          bottom: -10px;
+        }
+
+        .fixed.show {
+          height: 50px;
+          overflow: visible;
+        }
+      }
+
+      .circle {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        color: $Very-Dark-Grayish-Blue;
+        background-color: white;
+        transition: 0.5s;
+      }
+
+      .circle.touch {
+        color: white;
+        background-color: $Very-Dark-Grayish-Blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: block;
+    width: 350px;
+    height: max-content;
+    overflow: hidden;
+
+    .image {
+      img {
+        width: 350px;
+      }
+    }
+
+    .profile {
+      margin-bottom: -7px;
+
+      .share {
+        margin-left: 90px;
+
+        .application {
+          bottom: -30px;
+          right: -85px;
+
+          .fixed {
+            width: 350px;
+            border-radius: 0%;
+            position: relative;
+          }
+
+          .public {
+            font-size: 15px;
+            font-weight: normal;
+            transform: translateX(-65px);
+          }
+
+          .ion-icon {
+            margin-left: -50px;
+            transform: translateX(-20px);
+          }
+
+          .fixed.show {
+            height: 80px;
+          }
+        }
+
+        .circle.touch {
+          background-color: $Desaturated-Dark-Blue;
+        }
+      }
+    }
+  }
+}

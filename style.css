@@ -1,0 +1,241 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 800px;
+  height: 300px;
+  background-color: #ecf2f8;
+  -webkit-box-shadow: 3px 3px 25px rgba(72, 85, 106, 0.5);
+          box-shadow: 3px 3px 25px rgba(72, 85, 106, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container .image img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .content {
+  padding: 20px 50px;
+  font-family: "Manrope", sans-serif;
+}
+
+.container .content .title {
+  font-size: 1.2em;
+  color: #48556a;
+  font-weight: bold;
+}
+
+.container .content .p1 {
+  font-size: 13px;
+  color: #6d7f97;
+  line-height: 20px;
+}
+
+.container .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.container .profile .profile-picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.container .profile .profile-name {
+  margin-left: 15px;
+  white-space: nowrap;
+}
+
+.container .profile .profile-name .name {
+  color: #48556a;
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: -10px;
+}
+
+.container .profile .profile-name .date {
+  color: #6d7f97;
+  font-size: 12px;
+}
+
+.container .profile .share {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin-left: 200px;
+  font-size: 20px;
+  color: #48556a;
+  cursor: pointer;
+  background-color: #ecf2f8;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .profile .share .application {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: absolute;
+  bottom: 110px;
+  right: 145px;
+}
+
+.container .profile .share .application .fixed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 0px;
+  overflow: hidden;
+  padding: 0px 35px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: fixed;
+  background-color: #48556a;
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .profile .share .application .public {
+  font-size: 13px;
+  color: #9eafc2;
+  margin-right: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.container .profile .share .application .ion-icon ion-icon {
+  margin-right: 10px;
+  color: #ecf2f8;
+  cursor: pointer;
+}
+
+.container .profile .share .application .fixed::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #48556a;
+  position: absolute;
+  bottom: -10px;
+}
+
+.container .profile .share .application .fixed.show {
+  height: 50px;
+  overflow: visible;
+}
+
+.container .profile .share .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  color: #48556a;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .profile .share .circle.touch {
+  color: white;
+  background-color: #48556a;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    display: block;
+    width: 350px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    overflow: hidden;
+  }
+  .container .image img {
+    width: 350px;
+  }
+  .container .profile {
+    margin-bottom: -7px;
+  }
+  .container .profile .share {
+    margin-left: 90px;
+  }
+  .container .profile .share .application {
+    bottom: -30px;
+    right: -85px;
+  }
+  .container .profile .share .application .fixed {
+    width: 350px;
+    border-radius: 0%;
+    position: relative;
+  }
+  .container .profile .share .application .public {
+    font-size: 15px;
+    font-weight: normal;
+    -webkit-transform: translateX(-65px);
+            transform: translateX(-65px);
+  }
+  .container .profile .share .application .ion-icon {
+    margin-left: -50px;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  .container .profile .share .application .fixed.show {
+    height: 80px;
+  }
+  .container .profile .share .circle.touch {
+    background-color: #6d7f97;
+  }
+}
+/*# sourceMappingURL=style.css.map */
