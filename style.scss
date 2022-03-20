@@ -9,12 +9,13 @@ body {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+  background-color: $Light-Grayish-Blue;
 }
 
 .container {
   width: 800px;
   height: 300px;
-  background-color: $Light-Grayish-Blue;
+  background-color: white;
   box-shadow: 3px 3px 25px hsla(217, 19%, 35%, 0.5);
   display: flex;
   border-radius: 10px;
